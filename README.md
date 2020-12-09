@@ -28,9 +28,9 @@ A website that previews markdown.
 
 ## Stages
 
-1. HTML skeleton
-2. Script function
-3. Script onload
-4. CSS basic style
-5. CSS markdown style
-6. Enlarge button
+- [X] HTML skeleton
+- [ ] Script function
+- [ ] Script onload
+- [ ] CSS basic style
+- [ ] CSS markdown style
+- [ ] Enlarge button

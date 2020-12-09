@@ -11,8 +11,8 @@ A website that previews markdown.
 5. Script function: interpret carriage returns as ```br``` elements
 6. Script onload: editor with default markdown
 7. Script onload: preview with default markdown rendered
-8. Element button: editor enlarge
-9. Element button: preview enlarge
+8. Element button: editor resize
+9. Element button: preview resize
 
 ## Website Styles
 
@@ -29,8 +29,8 @@ A website that previews markdown.
 ## Stages
 
 - [X] HTML skeleton
-- [ ] Script function
-- [ ] Script onload
+- [X] Script function
+- [X] Script onload
 - [ ] CSS basic style
 - [ ] CSS markdown style
-- [ ] Enlarge button
+- [X] Resize button

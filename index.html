@@ -13,6 +13,7 @@
   <script>less.watch();</script>
 
   <script type='module' src="app.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://kit.fontawesome.com/318a6450cb.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,7 +22,7 @@
     <div class="header">
       <i class="fab fa-free-code-camp"></i>
       Editor
-      <i class="fas fa-expand-arrows-alt enlarge"></i>
+      <i class="resize fas fa-expand-arrows-alt"></i>
     </div>
     <textarea class="view" id="editor"></textarea>
   </div>
@@ -29,7 +30,7 @@
     <div class="header">
       <i class="fab fa-free-code-camp"></i>
       Previewer
-      <i class="fas fa-expand-arrows-alt enlarge"></i>
+      <i class="resize fas fa-expand-arrows-alt"></i>
     </div>
     <div class="view" id="preview"></div>
   </div>

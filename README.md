@@ -18,7 +18,7 @@ A website that previews markdown.
 * Ocean dark: ```#1E2B33```
 * Ocean medium: ```#666F74```
 * Ocean light: ```#EBEDEF```
-* Background color: ```ocean medium```
+* Body color: ```ocean medium```
 * Header color: ```ocean dark```
 * View color: ```ocean light```
 * Header font: ```Russo One 15px```

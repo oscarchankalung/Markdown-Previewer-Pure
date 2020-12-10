@@ -1,18 +1,18 @@
 /* default */
 
 @colors: {
-  background: #666F74;
+  body: #666F74;
   header: #1E2B33;
   view: #EBEDEF;
 }
 @size: {
-  narrow: 1100px;
-  mobile: 460px;
+  narrow: 720px;
 }
-@font-face {
-  font-family: 'Belwe Bold';
-  src: url('img/Belwe Bold.otf');
-}
+
+@shadow: 0px 0px 5px 1px darken(@colors[body], 20%);
+@border: 1px solid black;
+
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
 
 /* Body */
 
@@ -20,4 +20,85 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 30px);
+  margin: 15px;
+  background-color: @colors[body];
+}
+
+/* Font and Color */
+
+.header {
+  font-family: Russo One, sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: @colors[header];
+}
+#editor {
+  font-family: Menlo, sans-serif;
+  font-size: 15px;
+  color: black;
+  background-color: @colors[view];
+}
+#preview {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  color: black;
+  background-color: @colors[view];
+}
+
+/* Container */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+.container + .container {
+  margin-left: 15px;
+}
+
+/* Header */
+
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  padding: 5px;
+  border: @border;
+  box-shadow: @shadow;
+  position: relative;
+  z-index: 1;
+  .icon {
+    font-size: 18px;
+    margin-left: 1px;
+    margin-right: 6px;
+  }
+  .resize {
+    margin-left: auto;
+  }
+}
+
+/* View */
+
+.view {
+  margin: 0;
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: scroll;
+  border: @border;
+  border-top: none;
+  box-shadow: @shadow;
+  &::after {
+    content: '';
+    padding: 5px;
+  }
+}
+#editor {
+  outline: none !important;
 }

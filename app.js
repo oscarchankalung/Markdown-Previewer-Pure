@@ -10,15 +10,15 @@ function App () {
   this.markdown = placeholder;
 }
 
-App.prototype.initPlaceholder = function () {
+App.prototype.initPlaceholder = async function () {
   this.editor.view.value = this.markdown;
-  this.previewer.setHTML(this.markdown);
+  await this.previewer.render(this.markdown);
   this.editor.view.addEventListener('input', () => this.liveUpdate());
 };
 
-App.prototype.liveUpdate = function () {
+App.prototype.liveUpdate = async function () {
   this.markdown = this.editor.getMarkdown();
-  this.previewer.setHTML(this.markdown);
+  await this.previewer.render(this.markdown);
 };
 
 App.prototype.initContainers = function () {

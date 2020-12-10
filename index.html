@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Markdown Previewer</title>
 
+  <link rel="stylesheet" href="markdown.css"/>
   <link type="text/css" rel="stylesheet/less" href="index.less"/>
   <script src="less.js" type="text/javascript"></script>
   <script>less = { env: 'development'};</script>
@@ -13,14 +14,13 @@
   <script>less.watch();</script>
 
   <script type='module' src="app.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="https://kit.fontawesome.com/318a6450cb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
   <div class="container">
     <div class="header">
-      <i class="fab fa-free-code-camp"></i>
+      <i class="icon fab fa-free-code-camp"></i>
       Editor
       <i class="resize fas fa-expand-arrows-alt"></i>
     </div>
@@ -28,11 +28,11 @@
   </div>
   <div class="container">
     <div class="header">
-      <i class="fab fa-free-code-camp"></i>
+      <i class="icon fab fa-free-code-camp"></i>
       Previewer
       <i class="resize fas fa-expand-arrows-alt"></i>
     </div>
-    <div class="view" id="preview"></div>
+    <div class="view markdown-body" id="preview"></div>
   </div>
 </body>
 

@@ -7,12 +7,11 @@ A website that previews markdown.
 1. Element: editor ```<textarea id="editor">```
 2. Element: preview ```<div id="preview>```
 3. Script function: live update ```oninput```
-4. Script function: render markdown into HTML ([marked.js](https://github.com/markedjs/marked?utm_source=cdnjs&utm_medium=cdnjs_link&utm_campaign=cdnjs_library))
-5. Script function: interpret carriage returns as ```br``` elements
-6. Script onload: editor with default markdown
-7. Script onload: preview with default markdown rendered
-8. Element button: editor resize
-9. Element button: preview resize
+4. Script function: render markdown into HTML
+5. Script onload: editor with default markdown
+6. Script onload: preview with default markdown rendered
+7. Element button: editor resize
+8. Element button: preview resize
 
 ## Website Styles
 
@@ -26,11 +25,18 @@ A website that previews markdown.
 * Editor font: ```Courier New```
 * Previewer font: ```--apple-system```
 
+## GitHub Markdown
+
+* [GitHub Markdown API](https://docs.github.com/en/free-pro-team@latest/rest/reference/markdown)
+* [GitHub Markdown CSS](https://github.com/sindresorhus/github-markdown-css)
+
 ## Stages
 
 - [X] HTML skeleton
 - [X] Script function
 - [X] Script onload
-- [ ] CSS basic style
-- [ ] CSS markdown style
-- [X] Resize button
+- [X] Script resize
+- [X] CSS basic
+- [X] CSS markdown
+- [ ] CSS resize
+- [ ] CSS narrow

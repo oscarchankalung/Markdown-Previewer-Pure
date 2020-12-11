@@ -16,7 +16,7 @@ Previewer.prototype.getHTML = async function (markdown) {
 
   if (!response.ok) {
     const body = await response.json();
-    throw new HttpError(response, body.message);
+    throw new HttpError(response, 'Fail to get HTML using GitHub Markdown API', body);
   } else {
     return await response.text();
   };
@@ -28,6 +28,8 @@ Previewer.prototype.render = async function (markwdown) {
     this.view.innerHTML = text;
   } catch (error) {
     console.log(`${error.name}: ${error.message}`);
+    console.log(`message: ${error.body.message}`);
+    console.log(`documentation_url: ${error.body.documentation_url}`);
   }
 };
 

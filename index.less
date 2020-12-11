@@ -69,7 +69,7 @@ body {
   justify-content: flex-start;
   align-items: center;
   height: 30px;
-  padding: 5px;
+  padding: 8px;
   border: @border;
   box-shadow: @shadow;
   position: relative;
@@ -79,7 +79,7 @@ body {
     margin-left: 1px;
     margin-right: 6px;
   }
-  .resize {
+  .button {
     margin-left: auto;
   }
 }
@@ -101,4 +101,15 @@ body {
 }
 #editor {
   outline: none !important;
+  resize: none;
+}
+
+/* Resize */
+
+.maximized {
+  margin: 0 !important;
+  width: 100% !important;
+}
+.minimized {
+  display: none !important;
 }

@@ -21,10 +21,15 @@
 *::after {
   box-sizing: border-box;
 }
+html {
+  height: 100vh;
+  height: -webkit-fill-available;
+}
 body {
   display: flex;
   flex-direction: row;
   margin: 0;
+  width: 100vw;
   height: 100vh;
   height: -webkit-fill-available;
   background-color: @colors[body];
@@ -45,7 +50,6 @@ body {
   background-color: @colors[view];
 }
 #preview {
-  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 16px;
   color: black;
   background-color: @colors[view];
@@ -57,7 +61,6 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: calc(inherit - 30px);
   margin: 15px;
 }
 .container + .container {
@@ -91,7 +94,7 @@ body {
 .view {
   margin: 0;
   padding: 10px;
-  flex-grow: 1;
+  flex: 1;
   overflow-y: scroll;
   border: @border;
   border-top: none;
@@ -109,8 +112,8 @@ body {
 /* Resize */
 
 .maximized {
-  margin: 0 !important;
-  width: 100% !important;
+  margin: 15px !important;
+  width: calc(100% - 30px) !important;
 }
 .minimized {
   display: none !important;

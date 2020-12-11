@@ -47,8 +47,7 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
-  flex-basis: 0;
+  flex: 1;
   margin: 15px;
 }
 .container + .container {
@@ -82,7 +81,6 @@ body {
   max-width: 100%;
   overflow-y: scroll;
   -webkit-box-shadow: 0 0 8px 2px #363b3e;
-  -webkit-appearance: none;
   box-shadow: 0 0 8px 2px #363b3e;
   border: 1px solid black;
   border-top: none;

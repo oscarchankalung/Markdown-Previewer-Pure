@@ -6,12 +6,12 @@ A website that previews markdown.
 
 1. Element: editor ```<textarea id="editor">```
 2. Element: preview ```<div id="preview>```
-3. Script function: live update ```oninput```
-4. Script function: render markdown into HTML
-5. Script onload: editor with default markdown
-6. Script onload: preview with default markdown rendered
-7. Element button: editor resize
-8. Element button: preview resize
+3. Function: live update ```oninput```
+4. Function: render markdown into HTML
+5. Onload: editor with default markdown
+6. Onload: preview with default markdown rendered
+7. Button: editor zoom and switch
+8. Button: preview zoom and switch
 
 ## Website Styles
 
@@ -33,10 +33,10 @@ A website that previews markdown.
 ## Stages
 
 - [X] HTML skeleton
-- [X] Script function
-- [X] Script onload
-- [X] Script resize
+- [X] JS function
+- [X] JS onload
+- [X] JS resize
 - [X] CSS basic
 - [X] CSS markdown
-- [ ] CSS resize
-- [ ] CSS narrow
+- [X] CSS and JS zoom
+- [X] CSS and JS switch

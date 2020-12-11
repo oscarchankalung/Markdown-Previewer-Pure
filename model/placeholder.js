@@ -3,7 +3,7 @@ const placeholder = `# Welcome to my React Markdown Previewer!
 ## This is a sub-heading...
 ### And here's some other cool stuff:
 
-Heres some code, \`<div></div>\`, between 2 backticks.
+Here is some code, \`<div></div>\`, between 2 backticks.
 
 \`\`\`
 // this is multi-line code:
@@ -36,7 +36,7 @@ And here. | Okay. | I think we get it.
         - That look like this.
 
 
-1. And there are numbererd lists too.
+1. And there are numbered lists too.
 1. Use just 1s if you want!
 1. And last but not least, let's not forget embedded images:
 

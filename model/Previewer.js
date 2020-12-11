@@ -1,8 +1,10 @@
+import HttpError from './HttpError.js';
+
 function Previewer () {
   this.view = document.querySelector('#preview');
 }
 
-Previewer.prototype.render = async function (markdown) {
+Previewer.prototype.getHTML = async function (markdown) {
   const href = 'https://api.github.com/markdown';
   const body = JSON.stringify({ text: markdown });
 
@@ -13,11 +15,20 @@ Previewer.prototype.render = async function (markdown) {
   });
 
   if (!response.ok) {
-    throw new Error(response.message);
+    const body = await response.json();
+    throw new HttpError(response, body.message);
   } else {
-    const text = await response.text();
-    this.view.innerHTML = text;
+    return await response.text();
   };
+};
+
+Previewer.prototype.render = async function (markwdown) {
+  try {
+    const text = await this.getHTML(markwdown);
+    this.view.innerHTML = text;
+  } catch (error) {
+    console.log(`${error.name}: ${error.message}`);
+  }
 };
 
 export default Previewer;

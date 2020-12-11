@@ -15,8 +15,9 @@
 body {
   display: flex;
   flex-direction: row;
-  height: calc(100vh - 30px);
-  margin: 15px;
+  margin: 0;
+  height: 100vh;
+  height: -webkit-fill-available;
   background-color: #666F74;
 }
 /* Font and Color */
@@ -43,10 +44,11 @@ body {
   display: flex;
   flex-direction: column;
   width: 50%;
-  height: 100%;
+  height: calc(inherit - 30px);
+  margin: 15px;
 }
 .container + .container {
-  margin-left: 15px;
+  margin-left: 0;
 }
 /* Header */
 .header {

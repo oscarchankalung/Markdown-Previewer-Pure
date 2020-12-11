@@ -1,4 +1,4 @@
-const placeholder = `# Welcome to my React Markdown Previewer!
+const placeholder = `# Welcome to my Pure Markdown Previewer!
 
 ## This is a sub-heading...
 ### And here's some other cool stuff:
@@ -40,6 +40,6 @@ And here. | Okay. | I think we get it.
 1. Use just 1s if you want!
 1. And last but not least, let's not forget embedded images:
 
-![React Logo w/ Text](https://goo.gl/Umyytc)`;
+![JavaScrip Logo](https://bit.ly/3qJXAam)`;
 
 export default placeholder;

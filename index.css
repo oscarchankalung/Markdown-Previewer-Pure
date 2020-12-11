@@ -1,0 +1,96 @@
+/* default */
+@font-face {
+  font-family: 'Russo One';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/russoone/v9/Z9XUDmZRWg6M1LvRYsHOz8mM.ttf) format('truetype');
+}
+/* Body */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  height: calc(100vh - 30px);
+  margin: 15px;
+  background-color: #666F74;
+}
+/* Font and Color */
+.header {
+  font-family: Russo One, sans-serif;
+  font-size: 15px;
+  color: white;
+  background-color: #1E2B33;
+}
+#editor {
+  font-family: Menlo, sans-serif;
+  font-size: 15px;
+  color: black;
+  background-color: #EBEDEF;
+}
+#preview {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 15px;
+  color: black;
+  background-color: #EBEDEF;
+}
+/* Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+}
+.container + .container {
+  margin-left: 15px;
+}
+/* Header */
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 30px;
+  padding: 8px;
+  border: 1px solid black;
+  box-shadow: 0px 0px 5px 1px #363b3e;
+  position: relative;
+  z-index: 1;
+}
+.header .icon {
+  font-size: 18px;
+  margin-left: 1px;
+  margin-right: 6px;
+}
+.header .button {
+  margin-left: auto;
+}
+/* View */
+.view {
+  margin: 0;
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: scroll;
+  border: 1px solid black;
+  border-top: none;
+  box-shadow: 0px 0px 5px 1px #363b3e;
+}
+.view::after {
+  content: '';
+  padding: 5px;
+}
+#editor {
+  outline: none !important;
+  resize: none;
+}
+/* Resize */
+.maximized {
+  margin: 0 !important;
+  width: 100% !important;
+}
+.minimized {
+  display: none !important;
+}

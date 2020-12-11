@@ -96,16 +96,16 @@ body {
   padding: 10px;
   flex: 1;
   overflow-y: scroll;
-  border: @border;
-  border-top: none;
-  box-shadow: @shadow;
+  border: @border !important;
+  border-top: none !important;
+  border-radius: none !important;
+  box-shadow: @shadow !important;
   &::after {
     content: '';
     padding: 5px;
   }
 }
 #editor {
-  display: block;
   outline: none !important;
   resize: none;
 }

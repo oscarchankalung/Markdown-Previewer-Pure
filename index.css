@@ -35,13 +35,14 @@ html {
   height: -webkit-fill-available;
 }
 body {
-  margin: 0;
-  height: inherit;
-  background-color: #666F74;
-  /* child */
   display: flex;
   flex-direction: row;
   align-items: stretch;
+}
+body {
+  margin: 0;
+  height: inherit;
+  background-color: #666F74;
 }
 /* Container */
 .container {
@@ -80,7 +81,6 @@ body {
   box-shadow: 0 0 8px 2px #363b3e;
   border: 1px solid black;
   border-top: none;
-  border-radius: 0;
 }
 .view-wrapper .view {
   height: 100%;
@@ -94,6 +94,7 @@ body {
   padding: 5px;
 }
 .view-wrapper #editor {
+  border-radius: 0;
   outline: none !important;
   resize: none;
 }

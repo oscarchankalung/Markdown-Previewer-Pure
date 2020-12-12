@@ -6,12 +6,15 @@ function Previewer () {
 
 Previewer.prototype.getHTML = async function (markdown) {
   const href = 'https://api.github.com/markdown';
-  const body = JSON.stringify({ text: markdown });
+  const body = { text: markdown };
 
   const response = await fetch(href, {
     method: 'POST',
-    body: body,
-    headers: { Accept: 'application/vnd.github.v3+json' }
+    body: JSON.stringify(body),
+    headers: {
+      Accept: 'application/vnd.github.v3+json',
+      Authorization: 'token 6605244060df94bcd06a04204a2ba4f524c9de3c'
+    }
   });
 
   if (!response.ok) {

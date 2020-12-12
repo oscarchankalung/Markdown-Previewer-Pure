@@ -94,6 +94,7 @@ body {
   padding: 5px;
 }
 .view-wrapper #editor {
+  border: none;
   border-radius: 0;
   outline: none !important;
   resize: none;

@@ -1,29 +1,10 @@
-/* default */
+/* Default */
 @font-face {
   font-family: 'Russo One';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
   src: url(https://fonts.gstatic.com/s/russoone/v9/Z9XUDmZRWg6M1LvRYsHOz8mM.ttf) format('truetype');
-}
-/* Body */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-html {
-  height: 100vh;
-  height: -webkit-fill-available;
-}
-body {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  height: -webkit-fill-available;
-  background-color: #666F74;
 }
 /* Font and Color */
 .header {
@@ -43,12 +24,29 @@ body {
   color: black;
   background-color: #EBEDEF;
 }
+/* Body */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+  height: -webkit-fill-available;
+}
+body {
+  margin: 0;
+  height: inherit;
+  background-color: #666F74;
+  /* child */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
 /* Container */
 .container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
   margin: 15px;
+  width: 50%;
 }
 .container + .container {
   margin-left: 0;
@@ -58,6 +56,8 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+.header {
   height: 30px;
   padding: 8px;
   border: 1px solid black;
@@ -74,24 +74,26 @@ body {
   margin-left: auto;
 }
 /* View */
-.view {
+.view-wrapper {
+  height: calc(100% - 30px);
   margin: 0;
-  padding: 10px;
-  flex: 1;
-  max-width: 100%;
-  overflow-y: scroll;
-  -webkit-box-shadow: 0 0 8px 2px #363b3e;
-  -webkit-appearance: none;
   box-shadow: 0 0 8px 2px #363b3e;
   border: 1px solid black;
   border-top: none;
   border-radius: 0;
 }
-.view::after {
+.view-wrapper .view {
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  margin: 0;
+  overflow-y: scroll;
+}
+.view-wrapper .view::after {
   content: '';
   padding: 5px;
 }
-#editor {
+.view-wrapper #editor {
   outline: none !important;
   resize: none;
 }

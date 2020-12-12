@@ -7,7 +7,7 @@
   <title>Markdown Previewer</title>
 
   <link rel="stylesheet" href="markdown.css"/>
-  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="less.css"/>
 
   <script type='module' src="app.js" defer></script>
   <script src="https://kit.fontawesome.com/318a6450cb.js" crossorigin="anonymous"></script>
@@ -20,7 +20,9 @@
       <span class="name">Editor</span>
       <i class="button"></i>
     </div>
-    <textarea class="view" id="editor"></textarea>
+    <div class="view-wrapper">
+      <textarea class="view" id="editor"></textarea>
+    </div>
   </div>
   <div class="container">
     <div class="header">
@@ -28,7 +30,9 @@
       <span class="name">Previewer</span>
       <i class="button"></i>
     </div>
-    <div class="view markdown-body" id="preview"></div>
+    <div class="view-wrapper">
+      <div class="view markdown-body" id="preview"></div>
+    </div>
   </div>
 </body>
 

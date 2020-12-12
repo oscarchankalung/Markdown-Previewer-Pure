@@ -1,4 +1,4 @@
-/* default */
+/* Default */
 
 @colors: {
   body: #666F74;
@@ -13,27 +13,6 @@
 @border: 1px solid black;
 
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
-
-/* Body */
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-html {
-  height: 100vh;
-  height: -webkit-fill-available;
-}
-body {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  width: 100vw;
-  height: 100vh;
-  height: -webkit-fill-available;
-  background-color: @colors[body];
-}
 
 /* Font and Color */
 
@@ -55,13 +34,33 @@ body {
   background-color: @colors[view];
 }
 
+/* Body */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  height: 100vh;
+  height: -webkit-fill-available;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+body {
+  margin: 0;
+  height: inherit;
+  background-color: @colors[body];
+}
+
 /* Container */
 
 .container {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
   margin: 15px;
+  width: 50%;
 }
 .container + .container {
   margin-left: 0;
@@ -73,6 +72,8 @@ body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+.header {
   height: 30px;
   padding: 8px;
   border: @border;
@@ -91,26 +92,28 @@ body {
 
 /* View */
 
-.view {
+.view-wrapper {
+  height: calc(100% - 30px);
   margin: 0;
-  padding: 10px;
-  flex: 1;
-  max-width: 100%;
-  overflow-y: scroll;
-  -webkit-box-shadow: @shadow;
-  -webkit-appearance: none;
   box-shadow: @shadow;
   border: @border;
   border-top: none;
   border-radius: 0;
-  &::after {
-    content: '';
-    padding: 5px;
+  .view {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    overflow-y: scroll;
+    &::after {
+      content: '';
+      padding: 5px;
+    }
   }
-}
-#editor {
-  outline: none !important;
-  resize: none;
+  #editor {
+    outline: none !important;
+    resize: none;
+  }
 }
 
 /* Resize */

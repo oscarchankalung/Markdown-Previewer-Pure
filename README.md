@@ -1,6 +1,6 @@
 # Markdown-Previewer-Pure
 
-A website that previews markdown.
+A website that previews markdown. This website is intensionally written using pure JavaScript and object prototypes. I try to apply React concepts like component and state. With this in mind, it would be relatively easy to convert this into React.
 
 ## Requirements
 
@@ -40,3 +40,7 @@ A website that previews markdown.
 - [X] CSS markdown
 - [X] CSS and JS zoom
 - [X] CSS and JS switch
+
+## Issues - To Do
+
+* Hide token

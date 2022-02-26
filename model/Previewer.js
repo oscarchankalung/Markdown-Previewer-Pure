@@ -13,7 +13,7 @@ Previewer.prototype.getHTML = async function (markdown) {
     body: JSON.stringify(body),
     headers: {
       Accept: 'application/vnd.github.v3+json',
-      Authorization: 'token 6605244060df94bcd06a04204a2ba4f524c9de3c'
+      Authorization: 'token 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'
     }
   });
 
